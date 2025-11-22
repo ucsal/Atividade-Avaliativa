@@ -1,0 +1,7 @@
+message: "Configuração do ambiente de PRODUÇÃO. (V1)"
+service:
+  url: http://prod-api-gateway:8443
+  timeout-ms: 5000
+database:
+  username: user_prod
+  password: '{cipher}A_SENHA_CIFRADA_PELO_SERVER'
