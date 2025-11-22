@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  
+  # Configuração do Git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ucsal/Atividade-Avaliativa
+          default-label: main
+
+  # Configuração do PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/atividadeAvaliativa
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+# Endpoints de gerenciamento
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
