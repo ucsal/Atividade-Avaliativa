@@ -1,0 +1,3 @@
+message: "Configuração do ambiente de desenvolvimento. (V1)"
+service:
+  url: http://dev-api-gateway:8080
